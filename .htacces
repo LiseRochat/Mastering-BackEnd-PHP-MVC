@@ -1,0 +1,3 @@
+// Je lance la réecriture des url
+RewriteEngine On 
+
