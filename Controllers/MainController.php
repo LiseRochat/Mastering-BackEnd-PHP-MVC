@@ -5,22 +5,35 @@
 */
 class Main {
     
-    public function home() {
-        $page_description = "Strucuture de base d'un projet en php";
-        $page_title = "Projet PHP MVC";
+    // Aucun autre fichier ne peut appeler cette fonction
+    private function generatePage($data) {
+        // La fonction extract permet de decomposer un tableau en plusieurs variable
+        extract($data);
         ob_start();
-        require_once("./Views/home.php");
+        // $view = $data['view']
+        require_once($view);
         $page_content = ob_get_clean();
-        require("Views/Common/template.php");
+        require($template);
+    }
+
+    public function home() {
+        $data_page = [
+            "page_description" => "Strucuture de base d'un projet en php",
+            "page_title" => "Projet PHP MVC",
+            "view" => "Views/home.php",
+            "template" => "Views/Common/template.php"
+        ];
+        $this->generatePage($data_page);
     }
 
     public function page1() {
-        $page_description = "Strucuture de base d'un projet en php";
-        $page_title = "Projet PHP MVC";
-        ob_start();
-        require_once("./Views/page1.php");
-        $page_content = ob_get_clean();
-        require("Views/Common/template.php");
+        $data_page = [
+            "page_description" => "Strucuture de base d'un projet en php",
+            "page_title" => "Projet PHP MVC",
+            "view" => "Views/page1.php",
+            "template" => "Views/Common/template.php"
+        ];
+        $this->generatePage($data_page);
     }
 
     public function pageErrors($message) {
