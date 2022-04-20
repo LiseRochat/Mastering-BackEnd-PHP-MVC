@@ -3,8 +3,8 @@
 class BDD {
 
     private static $pdo;
-    private $user = "root";
-    private $password = " ";
+    private static $user = "root";
+    private static $password = "";
 
     // Gere la creation a la base de données
     private static function setBDD() {
