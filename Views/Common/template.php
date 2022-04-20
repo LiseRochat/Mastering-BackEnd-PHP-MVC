@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Appel du menu : attention toutes les pages partent de notre fichier de routage qui est index.php d'ou un chemin d'appel depuis le dossier Views-->
-    <?php require_once("Views/Common/menu.php") ?>
+    <?php require_once("Views/Common/header.php") ?>
 
     <?php if(!empty($_SESSION['alert'])) : ?>
 
@@ -27,5 +27,6 @@
 
     <!-- page_content : contenu des differentes pages -->
     <?php echo $page_content; ?>
+    <?php require_once("Views/Common/footer.php") ?>
 </body>
 </html>
