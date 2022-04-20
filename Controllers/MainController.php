@@ -6,12 +6,19 @@
 class Main {
     
     public function home() {
-
+        $page_description = "Strucuture de base d'un projet en php";
+        $page_title = "Projet PHP MVC";
+        $page_content = "<h1>Bonjour Tous le monde !</h1>";
+        require("Views/Common/template.php");
     }
 
     public function page1() {
-
+        $page_description = "Strucuture de base d'un projet en php";
+        $page_title = "Projet PHP MVC";
+        $page_content = "<h1>Bonjour Tous le monde Page 1 !</h1>";
+        require("Views/Common/template.php");
     }
+
     public function pageErrors() {
 
     }

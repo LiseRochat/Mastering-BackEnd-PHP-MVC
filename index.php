@@ -1,4 +1,7 @@
 <?php 
+require_once("./Controllers/MainController.php");
+$main = new Main();
+
 try {
     // Test si l'information index.php?page= est vide 
     if(empty($_GET['page'])) {
@@ -16,17 +19,10 @@ try {
     // On gère le premier niveau d'url
     switch($page) {
         case "accueil" :
-            // On gere le dexuieme niveau en insérent un deuxieme test de type swtich($url[1])
-            // Declaration des variables 
-            $page_description = "Strucuture de base d'un projet en php";
-            $page_title = "Projet PHP MVC";
-            $page_content = "<h1>Bonjour Tous le monde !</h1>";
+            $main->home();
         break; 
         case "page1" :
-            // Declaration des variables 
-            $page_description = "Strucuture de base d'un projet en php";
-            $page_title = "Projet PHP MVC";
-            $page_content = "<h1>Bonjour Tous le monde Page 1 !</h1>";
+            $main->page1();
         break; 
         // Classe existante de base de php pour gérer toutes les exceptions utilisateur.
         default : throw new Exception("La page n'existe pas !");
@@ -36,7 +32,3 @@ try {
     $page_title = "Page d'erreur";
     $page_content = $e->getMessage();
 }
-
-
-// Appel du template
-require_once("Views/common/template.php");
