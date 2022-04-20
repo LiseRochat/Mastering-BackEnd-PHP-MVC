@@ -28,7 +28,5 @@ try {
         default : throw new Exception("La page n'existe pas !");
     }
 } catch (Exception $e) {
-    $page_description = "Page permettant de gérer les erreurs";
-    $page_title = "Page d'erreur";
-    $page_content = $e->getMessage();
+    $main->pageErrors($e->getMessage());
 }

@@ -19,7 +19,10 @@ class Main {
         require("Views/Common/template.php");
     }
 
-    public function pageErrors() {
-
+    public function pageErrors($message) {
+        $page_description = "Page permettant de gérer les erreurs";
+        $page_title = "Page d'erreur";
+        $page_content = $message;
+        require("Views/Common/template.php");
     }
 }
