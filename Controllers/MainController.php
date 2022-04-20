@@ -35,10 +35,11 @@ class Main {
 
     public function page1() {
         $datas = $this->mainManager->getDataX();
-        
+
         $data_page = [
             "page_description" => "Strucuture de base d'un projet en php",
             "page_title" => "Projet PHP MVC",
+            "datas" => $datas,
             "view" => "Views/page1.php",
             "template" => "Views/Common/template.php"
         ];
