@@ -13,4 +13,13 @@ class BDD {
         // gerer les erreurs liées a PDO
         self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }
+
+    // Accesible depuis la classe qui étend model
+    protected function getBDD() {
+        // Si l'attribut est nul je crée une connexion
+        if(self::$pdo === null) {
+            self::setBDD();
+        }
+        return self::$pdo;
+    }
 }
