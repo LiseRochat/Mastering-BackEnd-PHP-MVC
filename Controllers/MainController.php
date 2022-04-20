@@ -3,8 +3,15 @@
     Création d'un objet Main
     Une fonction par demande de l'utilisateur
 */
+
+require_once("Models/MainManager.php");
 class Main {
     
+    private $mainManager;
+
+    public function  __construct() {
+        $this->mainManager = new MainManager();
+    }
     // Aucun autre fichier ne peut appeler cette fonction
     private function generatePage($data) {
         // La fonction extract permet de decomposer un tableau en plusieurs variable
@@ -27,9 +34,12 @@ class Main {
     }
 
     public function page1() {
+        $datas = $this->mainManager->getDataX();
+
         $data_page = [
             "page_description" => "Strucuture de base d'un projet en php",
             "page_title" => "Projet PHP MVC",
+            "datas" => $datas,
             "view" => "Views/page1.php",
             "template" => "Views/Common/template.php"
         ];
