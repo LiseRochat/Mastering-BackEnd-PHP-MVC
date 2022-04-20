@@ -10,6 +10,8 @@
     <title><?php echo $page_title; ?></title>
 </head>
 <body>
+    <!-- Appel du menu -->
+    <?php require_once("Views/Common/menu.php") ?>
     <!-- page_content : contenu des differentes pages -->
     <?php echo $page_content; ?>
 </body>
