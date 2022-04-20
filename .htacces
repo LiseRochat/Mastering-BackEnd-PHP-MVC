@@ -1,3 +1,9 @@
 // Je lance la réecriture des url
 RewriteEngine On 
 
+// Deux conditions pour préparer l'instruction de réecriture
+RewriteCond %(REQUEST_FILENAME) !-f 
+RewriteCond %(REQUEST_FILENAME) !-d
+
+// Règle de réecriture
+RewriteRule ^(.*)$index.php?page=$1
