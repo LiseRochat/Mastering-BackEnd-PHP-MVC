@@ -34,7 +34,7 @@ class Main {
     }
 
     public function page1() {
-        $datas = $this->mainManager->getDataX();
+        $datas = $this->mainManager->getDatas();
 
         $data_page = [
             "page_description" => "Strucuture de base d'un projet en php",
