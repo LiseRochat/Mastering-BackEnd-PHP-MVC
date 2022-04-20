@@ -11,7 +11,6 @@ if(empty($_GET['page'])) {
     */
     $url = explode("/", filter_var($_GET['page'], FILTER_SANITIZE_URL));
     $page = $url[0];
-    print_r($url);
 }
 
 // On gère le premier niveau d'url
@@ -29,6 +28,8 @@ switch($page) {
         $page_title = "Projet PHP MVC";
         $page_content = "<h1>Bonjour Tous le monde Page 1 !</h1>";
     break; 
+    // Classe existante de base de php pour gérer toutes les exceptions utilisateur.
+    default : throw new Exception("La page n'existe pas !");
 }
 
 
