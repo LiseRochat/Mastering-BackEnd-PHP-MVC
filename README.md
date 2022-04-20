@@ -19,7 +19,12 @@
 ***
 
 ### General Info
-Create a professional basic structure of a site in PHP   
+Create a professional basic structure of a site in PHP.<br>
+Reminders on MVC :<br>
+- Router: Allows to make the association between user requests and site logic 
+- Controller: Allows you to control the client request to find the necessary data and transmit it to the view. It coordinates what needs to be put in place to return the result
+- View: Displays the requested pages using the data transmitted by the controller
+- Model: Allows you to retrieve the data requested by the controller
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ***
