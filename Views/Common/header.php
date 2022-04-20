@@ -1,0 +1,1 @@
+<?php require_once("Views/Common/menu.php") ?>
