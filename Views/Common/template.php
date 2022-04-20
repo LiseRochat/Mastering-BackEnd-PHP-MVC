@@ -14,9 +14,11 @@
     <?php require_once("Views/Common/menu.php") ?>
 
     <?php if(!empty($_SESIION['alert'])) : ?>
+
         <p>
             <?php echo $_SESSION['alert']['message']; ?>
         </p>
+        
     <?php 
         //On nettoit la variable session 
         unset($_SESSION['alert']);
