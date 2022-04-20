@@ -7,8 +7,9 @@ if(empty($_GET['page'])) {
     /*
     On sépare la chaine de carcatere de l'url : /produits/casquettes/ avec la fonction explode() de php
     On obtien un tableau contenant les requetes de l'utilisateur tab[1]=produits tab[2]=casquettes
+
     */
-    $page = explode("/", $_Get['page']);
+    $page = explode("/", filter_var($_Get['page'], FILTER_SANITIZE_URL));
 }
 // Declaration des variables 
 $page_description = "Strucuture de base d'un projet en php";
