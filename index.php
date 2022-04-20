@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 require_once("./Controllers/MainController.php");
 $main = new Main();
 
