@@ -1,6 +1,7 @@
 <?php 
 session_start();
-
+// url complete depuis la racine du site (optionnel en cas de probleme pour accéder des ressources)
+define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS'])? "https" : "http")."://".$_SERVER['HTTP_HOST'].$_SERVER["PHP_SELF"]));
 require_once("./Controllers/MainController.php");
 $main = new Main();
 
