@@ -8,7 +8,8 @@ class Main {
     public function home() {
         $page_description = "Strucuture de base d'un projet en php";
         $page_title = "Projet PHP MVC";
-        $page_content = "<h1>Bonjour Tous le monde !</h1>";
+        require_once("./Views/home.php");
+        $page_content = "";
         require("Views/Common/template.php");
     }
 
