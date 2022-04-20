@@ -34,8 +34,10 @@ class Main {
     }
 
     public function page1() {
+        $_SESSION['alert'] = [
+            "message" => "Exemple de message d'alert",
+        ];
         $datas = $this->mainManager->getDatas();
-
         $data_page = [
             "page_description" => "Strucuture de base d'un projet en php",
             "page_title" => "Projet PHP MVC",
