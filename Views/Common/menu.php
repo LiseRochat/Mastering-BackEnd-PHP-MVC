@@ -1,6 +1,6 @@
 <nav>
     <ul>
-        <li><a href="">Accueil</a></li>
-        <li><a href="">Page 1</a></li>
+        <li><a href="accueil">Accueil</a></li>
+        <li><a href="page1">Page 1</a></li>
     </ul>
 </nav>
