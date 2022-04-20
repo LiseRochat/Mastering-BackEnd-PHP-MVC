@@ -37,11 +37,13 @@ class Main {
     }
 
     public function pageErrors($message) {
-        $page_description = "Page permettant de gérer les erreurs";
-        $page_title = "Page d'erreur";
-        ob_start();
-        require_once("./Views/errors.php");
-        $page_content = ob_get_clean();
-        require("Views/Common/template.php");
+        $data_page = [
+            "page_description" => "Page permettant de gérer les erreurs",
+            "page_title" => "Page d'erreur",
+            "message" => $message,
+            "view" => "Views/errors.php",
+            "template" => "Views/Common/template.php"
+        ];
+        $this->generatePage($data_page);
     }
 }
