@@ -21,16 +21,12 @@
     <!-- Appel du menu : attention toutes les pages partent de notre fichier de routage qui est index.php d'ou un chemin d'appel depuis le dossier Views-->
     <?php require_once("Views/Common/header.php") ?>
 
-    <?php if(!empty($_SESSION['alert'])) : ?>
-
-        <p>
-            <?php echo $_SESSION['alert']['message']; ?>
-        </p>
-
-    <?php 
-        //On nettoit la variable session 
-        unset($_SESSION['alert']);
-        endif; 
+    <?php if(!empty($_SESSION['alert'])) { 
+            foreach($_SESSION['alert'] as $alert) {
+                echo "<p>". $alert['message']."</p>";
+            }
+            unset($_SESSION['alert']);
+        }
     ?>
 
     <!-- page_content : contenu des differentes pages -->
