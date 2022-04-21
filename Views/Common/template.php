@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="<?php echo URL ?>public/CSS/main.css">
     <!-- Fichier css spécifique à une page  -->
     <?php if(!empty($page_css)) : ?>
-        <link rel="stylesheet" href="<?php echo URL ?>public/CSS/<?php echo $page_css ?>">
+        <?php foreach($page_css as $file_css) : ?>
+            <link rel="stylesheet" href="<?php echo URL ?>public/CSS/<?php echo $file_css ?>">
+        <?php endforeach; ?>
     <?php endif; ?>
 </head>
 <body>
