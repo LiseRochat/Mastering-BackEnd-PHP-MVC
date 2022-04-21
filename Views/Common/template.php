@@ -8,7 +8,12 @@
     <meta name="description" content="<?php echo $page_description; ?>">
     <!-- Title spécifique à chaque page -->
     <title><?php echo $page_title; ?></title>
+    <!-- Fichier css commun a toutes les pages -->
     <link rel="stylesheet" href="<?php echo URL ?>public/CSS/main.css">
+    <!-- Fichier css spécifique à une page  -->
+    <?php if(!empty($page_css)) : ?>
+        <link rel="stylesheet" href="<?php echo URL ?>public/CSS/<?php echo $page_css ?>">
+    <?php endif; ?>
 </head>
 <body>
     <!-- Appel du menu : attention toutes les pages partent de notre fichier de routage qui est index.php d'ou un chemin d'appel depuis le dossier Views-->
