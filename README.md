@@ -33,7 +33,7 @@ Reminders on MVC :<br>
 Here is an overview of project. </br>
 </br>
 <div align="center">
-  <img src="public/assets/img/screenshot01.png" alt="screenshot project">
+  <img src="public/assets/image/screenshot.png" alt="screenshot project">
 </div>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -54,7 +54,9 @@ Here is an overview of project. </br>
 git clone https://github.com/LiseRochat/Mastering-BackEnd-PHP-MVC
 ```
 2. Open file with you text editor 
-3. Run index.html in your navigator
+3. Create database name **zsite**
+4. Import exemple.sql file
+5. Run : **loclahost/http://localhost/Mastering-BackEnd-PHP-MVC/accueil**
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ***
