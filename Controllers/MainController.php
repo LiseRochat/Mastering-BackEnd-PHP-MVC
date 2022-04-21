@@ -5,6 +5,7 @@
 */
 
 require_once("Models/MainManager.php");
+require_once("Controllers/ToolBox.php");
 class Main {
     
     private $mainManager;
@@ -23,6 +24,7 @@ class Main {
         require($template);
     }
 
+    // page_css : tableau permettant d'ajouter des fichiers CSS spécifiques
     public function home() {
         $data_page = [
             "page_description" => "Strucuture de base d'un projet en php",
@@ -34,10 +36,10 @@ class Main {
         $this->generatePage($data_page);
     }
 
+     // page_js : tableau permettant d'ajouter des fichiers JS spécifiques
     public function page1() {
-        $_SESSION['alert'] = [
-            "message" => "Exemple de message d'alert",
-        ];
+        ToolBox::addMessageAlert("test");
+        ToolBox::addMessageAlert("test2");
         $datas = $this->mainManager->getDatas();
         $data_page = [
             "page_description" => "Strucuture de base d'un projet en php",

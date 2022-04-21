@@ -1,6 +1,6 @@
 <?php 
 
-require_once("./Controllers/BDDClass.php");
+require_once("Models/BDDClass.php");
 // Ne sert que à recupérer les données de la bdd
 class MainManager extends BDD {
     /*
