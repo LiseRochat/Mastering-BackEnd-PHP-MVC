@@ -36,5 +36,10 @@
     <!-- page_content : contenu des differentes pages -->
     <?php echo $page_content; ?>
     <?php require_once("Views/Common/footer.php") ?>
+    <?php if(!empty($page_js)) : ?>
+        <?php foreach($page_js as $file_js) : ?>
+            <script src="<?php echo URL ?>public/Javascript/<?php echo $file_js; ?>"></script>
+        <?php endforeach; ?>
+    <?php endif; ?>
 </body>
 </html>
