@@ -42,6 +42,7 @@ class Main {
         $data_page = [
             "page_description" => "Strucuture de base d'un projet en php",
             "page_title" => "Projet PHP MVC",
+            "page_js" => ["page1.js"],
             "datas" => $datas,
             "view" => "Views/page1.php",
             "template" => "Views/Common/template.php"
